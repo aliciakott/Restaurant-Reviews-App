@@ -157,6 +157,7 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
  */
 createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
+  //li.setAttribute('aria-label', restaurant.name);
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
@@ -178,6 +179,7 @@ createRestaurantHTML = (restaurant) => {
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
+  more.setAttribute('aria-label', ('View details' + restaurant.name))
   li.append(more)
 
   return li
@@ -212,6 +214,5 @@ addMarkersToMap = (restaurants = self.restaurants) => {
 if (navigator.serviceWorker) {
   navigator.serviceWorker.register('./sw.js')
   .then(function() {
-    //console.log('Success!');
   });
 }
