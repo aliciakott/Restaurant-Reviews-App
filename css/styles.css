@@ -194,7 +194,7 @@ nav h1 a {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 9999;
 }
 .inside #map-container {
   background: blue none repeat scroll 0 0;
@@ -267,7 +267,7 @@ nav h1 a {
 }
 #reviews-list li {
   background-color: #fff;
-    border: 2px solid #f3f3f3;
+  border: 2px solid #f3f3f3;
   display: block;
   list-style-type: none;
   margin: 0 0 30px;
@@ -281,4 +281,22 @@ nav h1 a {
 }
 #restaurant-hours td {
   color: #666;
+}
+
+@media (max-width: 825px) {
+	.inside #map-container, .inside #footer, #breadcrumb, #restaurant-container, #reviews-container  {
+		width: 100%;
+	}
+	.inside #map-container {
+		position: static;
+		height: 300px;
+	}
+	.inside header {
+		position: -webkit-sticky;
+	  position: sticky;
+	  top: 0;
+	}
+	#restaurant-container {
+		padding-top: 30px;
+	}
 }
