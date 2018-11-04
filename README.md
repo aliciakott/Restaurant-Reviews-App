@@ -19,7 +19,7 @@ Either clone or download and unzip the files to your local directory. Your insta
 * `/js/main.js`
 * `/js/restaurant_info.js`
 * `/sw.js`
-* `/index.html ``
+* `/index.html`
 * `/restaurant.html`
 * and an `img` folder with ten jpg's
 
