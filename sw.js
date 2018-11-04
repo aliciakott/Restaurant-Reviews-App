@@ -1,3 +1,4 @@
+// as the service worker is installing, an array of files is added to the cache
 self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('restaurant-reviews-v1')
@@ -30,7 +31,12 @@ self.addEventListener('install', function(event) {
   );
 });
 
-
+/*
+  when any network request is made, the service worker intercepts it, and checks
+  to see if that file exists in the cache. If it does, the service worker serves
+  that file from the cache. If it does NOT, then the url is fetched and added
+  to the cache.
+*/
 self.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.match(event.request).then(function(resp) {

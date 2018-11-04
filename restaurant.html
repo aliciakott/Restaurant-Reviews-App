@@ -16,6 +16,8 @@
   <header>
     <!-- Beginning nav -->
     <nav>
+      <!-- Added an aria-label for the h1 header, so the user knows what it does
+      Did not add any skiplinks, as there is far less tabbing to do to navigate these pages -->
       <h1><a aria-label="home page" href="/">Restaurant Reviews</a></h1>
     </nav>
     <!-- Beginning breadcrumb -->
@@ -31,7 +33,8 @@
   <main id="maincontent">
     <!-- Beginning map -->
     <section id="map-container" >
-      <div id="map" id="map" aria-role="application" aria-roledescription="map" aria-label="map of NYC with selected restaurant"></div>
+      <!--  Added aria label and role, so the screenreader doesn't recite the map's long attribution  -->
+      <div id="map" role="application" aria-roledescription="map" aria-label="map of NYC with selected restaurant"></div>
     </section>
     <!-- End map -->
     <!-- Beginning restaurant -->

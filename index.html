@@ -12,6 +12,8 @@
 <body>
   <header>
     <nav>
+      <!-- Added a skip-link to the dropdown menus, in case the user wanted to bypass the map
+      And an aria-label for the h1 header, so the user knows what it does -->
       <h1><a aria-label="home page" href="/">Restaurant Reviews</a></h1>
       <a class="skiplinks" href="#neighborhoods-select">skip to filter options</a>
     </nav>
@@ -19,11 +21,13 @@
 
   <main id="maincontent">
     <section id="map-container">
-      <div id="map" aria-role="application" aria-roledescription="map" aria-label="map of NYC with selected restaurants"></div>
+      <!--  Added aria label and role, so the screenreader doesn't recite the map's long attribution  -->
+      <div id="map" role="application" aria-roledescription="map" aria-label="map of NYC with selected restaurants"></div>
     </section>
     <section>
       <div class="filter-options">
         <h2>Filter Results</h2>
+        <!-- Added aria labels for both dropdown menus -->
         <select aria-label="select neighborhood" id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
           <option value="all">All Neighborhoods</option>
         </select>
@@ -40,6 +44,7 @@
   <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places&callback=initMap"></script> -->
 
   <footer id="footer">
+    <!-- Finally, added skip-links to bring the user back to the previous sections of the page, if they want -->
     <a class="skiplinks" href="#neighborhoods-select">skip to filter options</a>
     <a class="skiplinks" href="#map">skip to map</a>
     Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
