@@ -1,4 +1,4 @@
-# Udacity MyReads Project
+# Udacity Restaurant Reviews App
 
 Browse restaurants, or filter them by neighborhood and/or type of cuisine.
 
@@ -43,4 +43,4 @@ This assignment was completed as part of a Udacity Nanodegree. As such, no pull 
 
 MIT License
 
-The starter code comes from Udacity (_Click_ [Udacity's Restaurant Reviews Code](https://github.com/udacity/reactnd-project-myreads-starter) _to learn more_). Submitting this edited version as your own work is plagiarism and violates Udacity's Code of Honor, which may result in your expulsion from your nanodegree program.  
+The starter code comes from Udacity (_Click_ [Udacity's Restaurant Reviews Code](https://github.com/udacity/mws-restaurant-stage-1) _to learn more_). Submitting this edited version as your own work is plagiarism and violates Udacity's Code of Honor, which may result in your expulsion from your nanodegree program.  
