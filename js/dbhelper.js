@@ -9,7 +9,11 @@ class DBHelper {
    */
   static get DATABASE_URL() {
     const port = 8000 // Change this to your server port
-    return `http://localhost:${port}/data/restaurants.json`;
+    const hostName = location.hostname;
+    
+    // the purpose of this ternary is to host a version of this page on my github
+    const url = (hostName === "localhost") ? `http://localhost:${port}/data/restaurants.json` : `https://aliciakott.github.io/Restaurant-Reviews-App/restaurants.json`;
+    return url;
   }
 
   /**
